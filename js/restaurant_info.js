@@ -82,13 +82,14 @@ fillRestaurantHoursHTML = (
 	const hours = document.getElementById('restaurant-hours');
 	for (let key in operatingHours) {
 		const row = document.createElement('tr');
-
 		const day = document.createElement('td');
 		day.innerHTML = key;
 		row.appendChild(day);
 
 		const time = document.createElement('td');
-		time.innerHTML = operatingHours[key];
+		let opHours = operatingHours[key];
+		opHours = opHours.replace(',', ', \n <br /> \n');
+		time.innerHTML = opHours;
 		row.appendChild(time);
 
 		hours.appendChild(row);
