@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
 <head>
   <!-- meta tags -->
@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Normalize.css for better cross-browser consistency -->
-  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <link rel="stylesheet" src="https://normalize-css.googlecode.com/svn/trunk/normalize.css" />
 
   <!-- Main CSS file -->
   <link rel="stylesheet" href="css/styles.css" type="text/css">
@@ -44,14 +44,21 @@
     <!-- End map -->
     <!-- Beginning restaurant -->
     <section id="restaurant-container">
-      <h1 id="restaurant-name"></h1>
+      <h2 id="restaurant-name">
+      </h2>
       <div class="restaurant-info-container">
         <img id="restaurant-img">
         <p id="restaurant-cuisine"></p>
       </div>
       <div class="restaurant-hours-container">
         <p id="restaurant-address"></p>
-        <table id="restaurant-hours"></table>
+        <table id="restaurant-hours">
+          <caption>Hours</caption>
+          <tr>
+            <th>Weekday</th>
+            <th>Open</th>
+          </tr>
+        </table>
       </div>
       <!-- Beginning reviews -->
       <section id="reviews-container">
