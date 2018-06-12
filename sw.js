@@ -1,6 +1,7 @@
 const staticCacheName = 'restaurant-reviews-v1';
-const contentImgsCache = 'restaurant-images';
-const mapCache = 'restaurant-map';
+const contentImgsCache = 'restaurant-images-v1';
+const mapCache = 'restaurant-map-v1';
+const allCaches = [staticCacheName, contentImgsCache, mapCache];
 const filesArr = [
 	'/index.html',
 	'/restaurant.html',
@@ -10,7 +11,6 @@ const filesArr = [
 	'js/restaurant_info.js',
 	'data/restaurants.json'
 ];
-const allCaches = [staticCacheName, contentImgsCache];
 
 self.addEventListener('install', function(event) {
 	console.log('ServiceWorker installed');
@@ -73,7 +73,7 @@ self.addEventListener('fetch', function(event) {
 		}
 	}
 
-	// Catch all cache repsonse
+	// Catch all cache response
 	event.respondWith(
 		caches.match(event.request).then(function(response) {
 			return response || fetch(event.request);
@@ -83,7 +83,7 @@ self.addEventListener('fetch', function(event) {
 
 function servePhoto(request) {
 	// Update to user friendly name
-	var storageUrl = request.url.replace(/-\d+px\.jpg$/, '');
+	const storageUrl = request.url.replace(/-\d+px\.jpg$/, '');
 
 	// Add image to cache and serve image if in cache
 	return caches.open(contentImgsCache).then(function(cache) {
@@ -100,7 +100,7 @@ function servePhoto(request) {
 
 function serveMap(requestMap) {
 	// I wonder what it's response type is?
-	var mapName = 'map';
+	const mapName = 'map';
 
 	return caches.open(mapCache).then(function(cache) {
 		return cache.match(mapName).then(function(mapResponse) {
