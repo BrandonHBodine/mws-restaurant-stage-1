@@ -27,7 +27,7 @@
   <main id="maincontent">
 
     <section id="map-container">
-      <div id="map" ></div>
+      <div id="map" role="application"></div>
     </section>
 
     <section class="filter-options">
@@ -52,11 +52,6 @@
 
   </main>
 
-  <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
-  <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEHTLqQlbIc4-odc2DnMiEF2uF3arBz4s&libraries=places&callback=initMap"></script>
-
-
   <footer id="footer">
     Copyright (c) 2018
     <a href="/">
@@ -64,6 +59,10 @@
     </a> All Rights Reserved.
   </footer>
 
+  <script type="text/javascript" src="js/all.js"></script>
+  <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
+  <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEHTLqQlbIc4-odc2DnMiEF2uF3arBz4s&libraries=places&callback=initMap"></script>
 </body>
 
 </html>
