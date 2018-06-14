@@ -25,19 +25,15 @@
       <h1 class="logo-header">
         <a href="/">Restaurant Reviews</a>
       </h1>
-
-      <!-- End nav -->
-
       <!-- Beginning breadcrumb -->
-
-      <ul id="breadcrumb">
+      <ul id="breadcrumb" role="navigation" aria-label="Breadcrumb">
         <li>
           <a href="/">Home</a>
         </li>
       </ul>
+      <!-- End breadcrumb -->
     </nav>
-    <!-- End breadcrumb -->
-
+    <!-- End nav -->
   </header>
   <!-- End header -->
 
@@ -45,8 +41,7 @@
   <main id="maincontent">
     <!-- Beginning map -->
     <section id="map-container" class="restaurant-map">
-      <!-- Taking a guess at Aria value -->
-      <div id="map" role="application"></div>
+      <div id="map" aria-label="location" role="application"></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
